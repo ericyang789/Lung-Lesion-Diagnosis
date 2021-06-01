@@ -1,2 +1,9 @@
 # Lung-Lesion-Diagnosis
- The objective of this study is to build a model for automated chest radiograph interpretation of lung lesions with high performance.
+
+Background: The early identification of lung lesions is very important as lesions have a high likelihood of becoming cancerous. The objective of this study is to build a model for automated chest radiograph interpretation of lung lesions with high performance. Such a model could improve workflow prioritization, support decision making in clinical settings, and ultimately help progress large-scale screening and global population health initiatives.
+
+Methods: Using the Stanford CheXpert Dataset, we employ various modeling, sampling, and data cleaning methods throughout our study. Classification models used include convolutional neural networks with VGG16 and DenseNet121 architectures and a random forest model as baseline for comparison. Sampling methods used include oversampling the minority case and undersampling the majority case with different proportions. Various data cleaning strategies were employed including redefinition of negative cases and exclusion of lateral chest x-rays in an attempt to improve model focus.
+
+Results: We found that careful training data selection yielded the highest performance boost during testing. Our best performing model addressed the heterogeneity of the dataset by re-defining negative cases to ones that are either explicitly labeled as negative for lung lesion or labeled as “no finding”. Only frontal view images were included during training of the model. This highest performing model employed the VGG16 architecture with pre-trained weights, achieving an accuracy of 0.82, AUC of 0.82, precision of 0.76 and recall of 0.40.
+
+Discussions: The results of the various modeling, sampling, and data cleaning approaches included in this study highlight the importance of the data generating, data labeling, and data cleaning processes. Selecting the appropriate data for the task can yield significant performance boost compared to hyperparameter tuning.
